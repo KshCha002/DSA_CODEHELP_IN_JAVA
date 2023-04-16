@@ -1,4 +1,4 @@
-public class Main{
+public class Namaste1{
   public static void main(String[] args){
     System.out.println("Namaste Duniya");
   }
