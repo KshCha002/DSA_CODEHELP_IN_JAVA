@@ -1,19 +1,19 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        String copyString= new String();
+        StringBuilder copyString= new StringBuilder();
         
         for(int i=0;i<s.length();i++)
         {
             if(s.charAt(i)>='A'&& s.charAt(i)<='Z')
             {
-                copyString+=(char)(s.charAt(i)+32);
+                copyString.append((char)(s.charAt(i)+32));
             }
             if(s.charAt(i)>='0'&& s.charAt(i)<='9')
             {
-                copyString+=(char)(s.charAt(i));
+                copyString.append((char)(s.charAt(i)));
             }
             if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
-            copyString += (char)(s.charAt(i));
+            copyString.append((char)(s.charAt(i)));
             }
         }
         System.out.println(copyString);
