@@ -1,7 +1,7 @@
 
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
-
+if (k == nums.length) return nums;
         // Step 1: frequency map
         HashMap<Integer, Integer> h = new HashMap<>();
         for (int num : nums) {
