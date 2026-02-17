@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class selectionSort {
     
@@ -21,17 +21,7 @@ public class selectionSort {
         obj.printArr(arr);
 
     }
-    public int[] selectionSSort(int[] arr)
-    { 
-        for(int i=0;i<(arr.length-1);i++)
-        {  int min=i;
-
-            min= findmin(arr,i,min);
-            swap(arr,i,min);
-        }
-        
-        return arr;
-    }
+    
     public int findmin(int[] arr,int i,int min)
     {
         for (int j=i;j<(arr.length);j++){
@@ -42,12 +32,29 @@ public class selectionSort {
         }
         return min ;
     }
-    public void swap(int[] arr,int i,int min)
-    {
-        int temp =arr[i];
-        arr[i]=arr[min];
-        arr[min]=temp;
-    }
+    public void selectionSSort(int[] nums) {
+        int n = nums.length;
+        System.out.println("n="+n);
+        for (int i=0;i<n-2;i++)
+            {
+                int min = i;
+                for(int j=i+1;j<n;j++)
+                {
+                    if(nums[j]<nums[min])
+                    min=j;
+                }
+                swap(nums,i,min);
+            System.out.println(i+"   arr");
+            }   
+    
+        }
+    
+        public void swap(int[] arr,int i,int min)
+        {
+            int temp =arr[i];
+            arr[i]=arr[min];
+            arr[min]=temp;
+        }
 
     public void printArr(int [] arr)
     {
@@ -55,6 +62,7 @@ public class selectionSort {
         {
             System.out.print(a+ ", ");
         }
+        System.out.println();
     }
 
 }
