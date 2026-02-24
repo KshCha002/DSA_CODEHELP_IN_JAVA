@@ -14,36 +14,13 @@ public class quickSort {
         //     int x= sc.nextInt();
         //     arr[i]=x;
         // } 
-        // quickSort obj =new quickSort();
-        // System.out.println("before");
-        // obj.printArr(arr);
-        // obj.quickSSort(arr,0,(arr.length-1));
-        // System.out.println("after");
-        // obj.printArr(arr);
-    
- boolean flag;
-            int signedInt =153;
-            int n =signedInt;
-            String s= String.valueOf(signedInt);
-            System.out.println("Length"+ s.length());
-            int ans =0;
-          
-            while(signedInt>0)
-            {
-                double mod =signedInt%10;
-                ans= ans + (int)Math.pow(mod,(s.length())) ;
-                signedInt =signedInt/10;
-                
-            }
-        if(ans!= n)
-           {
-            System.out.println( "    Hiii   ");
-            flag= false;}
-        else
-            flag=  true;
-          
-        System.out.println(flag+ "    d   "+ans );
-        
+        quickSort obj =new quickSort();
+        System.out.println("before");
+        obj.printArr(arr);
+        obj.quickSSort(arr,0,(arr.length-1));
+        System.out.println("after");
+        obj.printArr(arr);
+
     }
     
 
