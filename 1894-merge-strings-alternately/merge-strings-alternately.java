@@ -14,6 +14,11 @@ class Solution {
             i++;
             j++;
         }
+        if(i==n1 & j==n2)
+        {
+           
+            return str;
+        }
           while(i<n1){
             char ch1=word1.charAt(i);
             str=str+ch1;
