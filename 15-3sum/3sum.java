@@ -3,7 +3,7 @@ class Solution {
         int n=nums.length;
          Arrays.sort(nums); 
     List<List<Integer>> l =new ArrayList<>();
-    Set<List<Integer>> s =new HashSet<List<Integer>>();//check set in java
+    //Set<List<Integer>> s =new HashSet<List<Integer>>();//check set in java
     if(nums.length==3)
             {
                 if( (nums[0]+nums[1]+nums[2])==0)
@@ -33,8 +33,8 @@ for(;i<n;i++)
         int sum =nums[i]+nums[j]+nums[k];
         if(sum ==0)
         {
-            //l.add(Arrays.asList(nums[0],nums[1],nums[2]));
-            s.add(Arrays.asList(nums[i],nums[j],nums[k]));
+            l.add(Arrays.asList(nums[i],nums[j],nums[k]));
+            //s.add(Arrays.asList(nums[i],nums[j],nums[k]));
             j++;
             k--;
             while(j<k && nums[j]==nums[j-1]){j++;}
@@ -56,7 +56,7 @@ for(;i<n;i++)
 
 }
 
-List<List<Integer>> list = new ArrayList<>(s);
-return list;
+//List<List<Integer>> list = new ArrayList<>(s);
+return l;
     }
 }
