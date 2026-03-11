@@ -6,9 +6,10 @@ class Solution {
     int count =0;
     for (int i=0;i<n;i++)
     {
-        if(Math.min(leftmax[i],rightmax[i])>height[i])
+        int mina= Math.min(leftmax[i],rightmax[i]);
+        if(mina>height[i])
         {
-            int water= Math.min(leftmax[i],rightmax[i])-height[i];
+            int water= mina-height[i];
             count =count+water;
         }
     }
