@@ -5,16 +5,17 @@ class Solution {
         int maxprofit=Integer.MIN_VALUE;;
   
         int mini=Integer.MAX_VALUE;
+        // for(int i=0;i<n;i++)
+        // {
+
+        //     minBuy[i]=
+        //     minBuy[i];
+
+        // }
         for(int i=0;i<n;i++)
         {
-
-            minBuy[i]=Math.min(mini,prices[i]);
-            mini=minBuy[i];
-
-        }
-        for(int i=0;i<n;i++)
-        {
-            int cost=prices[i]-minBuy[i];
+            mini=Math.min(mini,prices[i]);
+            int cost=prices[i]-mini;
             maxprofit=Math.max(maxprofit,cost);
 
         }
